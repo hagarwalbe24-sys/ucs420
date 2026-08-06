@@ -39,45 +39,44 @@ for i in range (1,11):
 print ("Sum of the numbers is: ", s)
 print (sum(range(1,11)))
 
-a = imput("Enter a number: ")
-b = input("Enter another number: ")
+a = int(input("Enter a number: "))
+b = int(input("Enter another number: "))
 if a > b:
     print (a, "is greater than", b)
 elif a < b:
     print (a, "is less than", b)
-else : 
-    print (a, "is equal to", b)
-    n = input("Enter a number: ")
-    if (n % 2 == 0):
-        print (n, "is even")
-    else:
-        print (n, "is odd")
-
-        n = int(input("Enter a No: "))
-f=0
-for i in range(2, n//2 + 1):
-	if  n % i == 0:
-		f=1
-		break
-
-if f==0:
-	print ("Prime")
 else:
-	print ("Not Prime")
+    print (a, "is equal to", b)
 
-     a = input("Enter a string ")
+n = int(input("Enter a number: "))
+if (n % 2 == 0):
+    print (n, "is even")
+else:
+    print (n, "is odd")
+
+f = 0
+for i in range(2, n//2 + 1):
+    if n % i == 0:
+        f = 1
+        break
+
+if f == 0:
+    print ("Prime")
+else:
+    print ("Not Prime")
+
+a = input("Enter a string ")
 b = input("Enter another string ")
 if a > b:
     print (a, "is greater than", b)
 elif a < b:
     print (a, "is less than", b)
-else : 
+else:
     print (a, "is equal to", b)
 
 def Add(a,b):
     return a+b
- print ("Sum of 10 and 20 is: ", Add(10,20))
-
+print ("Sum of 10 and 20 is: ", Add(10,20))
 def prime(n):
     if n <= 1:
         return False
@@ -85,6 +84,7 @@ def prime(n):
         if n % i == 0:
             return False
     return True
+
 print ("Is 7 prime? ", prime(7))
 def add(j):
      return sum(range(1,j+1))
@@ -116,3 +116,337 @@ print ("Length --> : ", len(var))
 print ("Upper  --> : ", var.upper())
 print ("Lower  --> : ", var.lower())
 
+product_name = input("Enter the product name: ")
+product_id = int(input("Enter the product ID: "))
+product_price = float(input("Enter the product price: "))
+
+s = "\nProduct Name: %s\nProduct ID: %d\nProduct Price: %.2f" % (
+    product_name.upper(),
+    product_id,
+    product_price
+)
+var ="Hellow world i am harshil agarwal"
+
+print("String    --> ", var)
+print("Length    --> ", len(var))
+print("var strip --> ", var.strip())
+print("Length of var after strip --> ", len(var.strip()))
+print(s)
+
+print("String    --> ", var)
+print("Length    --> ", len(var))
+print("var split --> ", var.split())
+print("var split --> ", var.split(' '))
+print("var split --> ", var.split(','))
+
+print("var split --> ", var.strip().split(','))
+
+print ("String       --> ", var)
+print ("Count of ' ' --> ", var.count(' '))
+print ("Count of 'a' --> ", var.count('s'))
+print ("Count of 'n' --> ", var.count('ar'))
+print ("var[::1]  --> ", var[::1])
+print ("var[::2]  --> ", var[::2])
+print ("var[::-1] --> ", var[::-1])
+print ("var[::-2] --> ", var[::-2])
+print ("var --> ", var==var[::-1])
+import random as r
+print (r.random())
+print (r.random())
+print (round(r.random(),4))
+print (r.randint(1, 100))
+print (r.randint(1, 100))
+print (r.randint(-10, 10))
+print (r.randint(-10, 10))
+import string as s
+import random as r
+print ("String        --> ",s.ascii_letters)
+
+passwd=r.sample(s.ascii_letters, 6)
+print ("Selected Char --> ",passwd)
+
+passwd1="".join(passwd)
+print ("passwd1       --> ",passwd1)
+
+passwd2="+".join(passwd)
+print ("passwd2       --> ",passwd2)
+
+passwd3="*".join(passwd)
+print ("passwd3       --> ",passwd3)
+
+import string as s
+import random as r
+print ("String + Digits --> ",s.ascii_letters + s.digits)
+
+mixPasswd=r.sample(s.ascii_letters + s.digits, 5)
+print ("\nSelected Str1 --> ",mixPasswd)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd1    --> ",mixPasswd)
+
+mixPasswd=r.sample(s.ascii_letters + s.digits, 6)
+print ("\nSelected Str2 --> ",mixPasswd)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd2    --> ",mixPasswd)
+
+splChar="#@!~%^&*()_+=-[]{}|"
+mixPasswd=r.sample(splChar + s.ascii_letters + s.digits, 8)
+print ("\nSelected Str3 --> ",mixPasswd)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd3    --> ",mixPasswd)
+fileName=input("Enter File Name: ")
+fp=open(fileName)	
+fp.close()
+print ("Done")
+fileName=input("Enter File Name: ")
+try:
+	fp=open(fileName)	
+	fp.close()
+except:
+	print ("Error !! \"%s\" File Not Found"%(fileName))
+
+print ("Done")
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List       --> ", L)
+
+L.append("Rahul")
+print ("List After Adding   --> ", L)
+
+del L[1]
+print ("List After Deleting --> ", L)
+
+L=[3, 6, 9, 12, 5, 3, 2]
+print ("Original List --> ", L)
+
+print ("Sum     --> ", sum(L))
+print ("Average --> ", sum(L)/len(L))
+print ("Average --> ", sum(L)//len(L))
+
+print ("L * 3   --> ", L * 3)    
+print ("L + L   --> ", L + L)
+L1 = [3, 6, 9]
+L2 = [12, 5, 3, 2]
+L3 = L1 + L2
+print ("L1 --> ",L1)
+print ("L2 --> ",L2)
+print ("L3 --> ",L3)
+
+print ("\nL3[2:]  --> ",L3[2:])
+print ("L3[2:5] --> ",L3[2:5])
+print ("L3[:-1] --> ",L3[:-1])
+print ("L3[::2] --> ",L3[::2])
+L = [12, 5, 3, 2, 7]
+print ("Original List --> ", L)
+
+newL = [ i * 5 for i in L ]
+print ("After Multiply with constant --> ", newL)
+L=[3, 6, 9, 12, 5, 3, 2]
+print ("Original List --> ", 6 in L)
+print ("Original List --> ", 10 in L)
+print ("Original List --> ", 12 in L)
+
+if (6 in L) == True:
+	print ("Present")
+else:
+	print ("Not Present")
+
+if 10 in L == False:
+	print ("Not Present")
+else:
+	print ("Present")
+     CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+print ("Dictionary --> ", CGPA)
+print ("Keys       --> ", list(CGPA.keys()))
+print ("Values     --> ", list(CGPA.values()))
+CGPA={1:8.9,2:5.6,4:6.7,7:9.1,8:5.3}
+print ("Original Dictionary --> ", CGPA)
+
+CGPA[4] = 9.2
+print ("After Updating (4)  --> ", CGPA)
+
+CGPA[3] = 8.6
+print ("After Adding (3)    --> ", CGPA)
+
+del CGPA[1]
+print ("After Deleting (1)  --> ", CGPA)
+
+CGPA.clear()
+print ("After Clear         --> ", CGPA)
+
+del CGPA
+print ("After Delete        --> ", CGPA)
+
+CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+print ("Original Dictionary --> ", CGPA)
+print ("Is Key 2 Present    --> ", 2 in CGPA)
+print ("Is Key 9 Present    --> ", 9 in CGPA)
+HomeTown={"Prashant":"Delhi", "Govind":"Gwalior", "Anil":"Morena", "Pankaj":"Agra"}
+print ("Original Dictionary --> ", HomeTown)
+
+for d in HomeTown:
+	print ("Home Town of ", d, " is  --> ", HomeTown[d])
+     T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T -->", T)
+
+i = 0
+while i < len(T):
+    print (T[i])
+    i += 1
+
+     T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T -->", T)
+
+for i in range(0, len(T)):
+    print (T[i])
+    
+T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T -->", T)
+
+for s in T:
+    print (s)
+
+     T = (3, 6, 9, 12, 5, 3, 2)
+print ("T     -->", T)
+
+print ("T[1]  -->", T[1])
+print ("T[2]  -->", T[2])
+print ("T[-1] -->", T[-1])
+print ("T[-2] -->", T[-2])
+T = (3, 6, 9, 12, 5, 3, 2)
+print ("T        -->", T)
+
+print ("T[1:3]   -->", T[1:3])
+print ("T[2:]    -->", T[2:])
+print ("T[2:5]   -->", T[2:5])
+print ("T[:2]    -->", T[:2])
+print ("T[:-1]   -->", T[:-1])
+print ("T[-4:-1] -->", T[-4:-1])
+T = (3, 6, 9, 12, 5, 3, 2)
+print ("T       -->", T)
+print ("Sum     -->", sum(T))
+print ("Average -->", sum(T)/len(T))
+print ("Average -->", sum(T)//len(T))
+T = ("Ram", "Shyam", "Human", "Ant")      # String Tuple
+print ("T   -->", T)
+print ("Max -->", max(T))
+print ("Min -->", min(T))
+
+T1 = (3, 6, 9)
+T2 = (12, 5, 3, 2)
+
+print ("T1 -->", T1)
+print ("T2 -->", T2)
+
+T3 = T1 + T2
+print ("T3 -->", T3)
+
+T4 = T1 + T2 + T1 + T2
+print ("T4 -->", T4)
+T1 = (3, 6, 9)
+T2 = (12, 5, 3, 2)
+
+print ("T1 -->", T1)
+print ("T2 -->", T2)
+
+T3 = T1[1:2] + T2[1:3]
+print ("T3 -->", T3)
+
+T4 = T1[:-2] + T2[:-3]
+print ("T4 -->", T4)
+     T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T -->", T)
+
+T[2] = 900               
+print ("T -->", T)
+
+T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T         -->", T)
+
+T1 = list(T)
+T1.append(9.8)
+T = tuple(T1)
+
+print ("After Add -->", T)
+
+     T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T            -->", T)
+
+T1 = list(T)
+T1.insert(2, "Rahul")
+T = tuple(T1)
+
+print ("After Insert -->", T)
+
+T = ("Pratham", 'Sharma', 3.14, 3)
+print ("T            -->", T)
+
+T1 = list(T)
+del T1[1]
+T = tuple(T1)
+
+print ("After Delete -->", T)
+
+s = set(['A', 'B', 'E', 'F','E', 'F' ])
+print ("Original set           --> ", s)
+print ("Num of elements in set --> ", len(s))
+a = set(['A', 'B', 'E', 'F' ])
+b = set(["A", "C", "D", "E"])
+print ("Original set a      --> ", a)
+print ("Original set b      --> ", b)
+print ("Union of a and b    --> ", a.union(b))
+print ("Intersection of a,b --> ", a.intersection(b))
+print ("Difference a - b    --> ", a - b)
+print ("Difference a - b    --> ", a.difference(b))
+print ("Difference b - a    --> ", b - a)
+print ("Difference b - a    --> ", b.difference(a))
+print ("Symetric Diff a - b --> ", a.symmetric_difference(b))
+print ("Symetric Diff b - a --> ", b.symmetric_difference(a))
+a = set(['A', 'B', 'E', 'F' ])
+print ("Original set a       --> ", a)
+a.add("D")
+print ("Set After Adding (D) --> ", a)
+a.add("D")
+print ("Set After Adding (D) --> ", a)
+a.remove("D")
+print ("Set After Deleting(D)--> ", a)
+a.pop()
+print ("Set After pop        --> ", a)
+a.pop()
+print ("Set After pop        --> ", a)
+     
+import sys
+print (sys.argv)
+a = int(sys.argv[1]) 	
+b = int(sys.argv[2])	
+c = a + b
+print (a, " + ", b, " --> ", c)
+import sys
+print (sys.argv)
+s = sys.argv[1] + " " + sys.argv[2]
+print (sys.argv[1], " + ", sys.argv[2], " --> ", s)
+import sys
+print (sys.argv)
+sum=0
+for s in sys.argv[1:]:
+	sum += int(s)
+
+print ("Sum is --> ", sum)
+fp=open('result.txt','w')	# Open the file in writing mode
+for  i in range(1,11):
+	fp.write(str(i) + "\n")	# Writing to the file line by line
+fp.close()
+
+print ("Writing done !! \nOpen result.txt to view the content")
+fp=open('result.txt')		# Open the file in reading mode
+for line in fp: 		    # print line by line
+	print (line.strip())
+fp.close()
+
+Readfp=open('result.txt')		# Open the file in reading mode
+Writefp=open('abc.txt','w')	# Open the file in writing mode
+for line in Readfp:
+	Writefp.write(line.upper())
+
+Writefp.close()
+Readfp.close()
+
+print ("Writing done !! \nOpen result.txt to view the content")
